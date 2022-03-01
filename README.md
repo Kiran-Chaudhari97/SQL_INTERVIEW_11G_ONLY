@@ -1,6 +1,13 @@
 # SQL_INTERVIEW_11G_ONLY
 
 Find the nth highest salary using in oracle 11g using
+-Self Join.
+```
+Select * from Employee a 
+    Where 3 = (
+                 Select Count (distinct Salary) from Employee 
+                  where a.salary<=b.salary;
+ ```
 - Rownum.    
 ```
 Select * from 
